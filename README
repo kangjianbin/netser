@@ -1,0 +1,3 @@
+A serial port to tcp client multiplexer.
+
+Usage: ser /path/to/serial/dev tcp_port [0/1]
