@@ -41,7 +41,7 @@ int serial_new(const char *path)
 	if (fd < 0)
 		return -1;
 	flags = fcntl(fd, F_GETFL, 0);
-	fcntl(fd, F_SETFL, flags |O_NDELAY);
+	fcntl(fd, F_SETFL, flags & (~O_NDELAY));
 
 	serial_init(fd);
 
